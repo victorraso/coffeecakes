@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <title>C&C Manager Login</title>
+</head>
+<body class="bg-dark text-light">
+    <div class="container mt-5">
+        <span class="text-uppercase fs-3">C&C Manager Login</span>
+        <div class="dummy-manager mb-4 mt-4" style="border: solid 1px red; color: red; padding-top: 20px; padding-left: 20px;">
+            <p>Username: manageroftheyear</p>
+            <p>Password: DUMMYcodeFORmanager|!2896!|</p>
+        </div>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert alert-danger">
+                    <ul>
+                        {% for category, message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+    
+        <form action="{{ url_for('manager_login') }}" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mt-2">Login</button>
+        </form>
+    </div>
+
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

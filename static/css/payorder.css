@@ -1,0 +1,174 @@
+body {
+    background-color: #292420;
+}
+
+.top-header {
+    height: 100px;
+    color: whitesmoke;
+}
+
+.top-header-container {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.pay-section-container {
+    padding-top: 10px;
+}
+
+.payorder-container {
+    display: flex;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin-bottom: 50px;
+}
+
+
+/* Summary */
+
+.container-left {
+    max-width: 400px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.accordion-item {
+    border: 0px;
+}
+
+.accordion-body {
+    background-color: #292420;
+    color: whitesmoke;
+}
+
+.accordion-button {
+    background-color: #292420;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.order-summary-container {
+    color: whitesmoke;
+}
+
+.line {
+    border-bottom: 2px solid whitesmoke;
+    margin-bottom: 10px;
+}
+
+.summary-ul {
+    padding: 0;
+}
+
+.summary-item-container {
+    display: flex;
+    justify-content: left;
+    margin-left: 30px;
+    gap: 5px;
+}
+
+.summary-title {
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+
+.summary-item-name {
+    width: 180px;
+}
+
+
+/* payment choices */
+
+.container-right {
+    flex: 1;
+    background-color: whitesmoke;
+    border-left: 1px solid whitesmoke;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.credit-navtabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* Dummy Card */
+
+.dummy-card {
+    border: 1px solid red;
+    color: red;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.dummy-card p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* @MEDIA */
+
+@media (max-width: 767px) {
+
+    .top-header {
+        height: 60px;
+    }
+
+    .top-header-container {
+        padding-top: 25px;
+        justify-content: left;
+    }
+
+    .payorder-container {
+        border: none;
+    }
+
+    .container-left {
+        padding: 0;
+    }
+
+    .container-right {
+        border-left: none;
+        border-top: 1px solid whitesmoke;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .summary-item-container {
+        margin-left: 10px;
+        justify-content: left;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .navbar-xxx {
+        align-items: left;
+    }
+}

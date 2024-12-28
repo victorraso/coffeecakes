@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/manager.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <title>C&C Manager Page</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand text-uppercase" href="#">C&C Manager</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-4">
+                    <li class="nav-item">
+                        <a class="nav-link active default-link" aria-current="page" href="#" data-url="/manager-sales">Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-url="/manager-prices">Prices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-url="/manager-register">Register</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="logoutlink" href="{{ url_for('manager_logout') }}">Log Out</a>
+                    </li>                     
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            
+        </div>
+    </main>
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/js/manager.js"></script>
+    <script src="../static/js/manager-prices.js"></script>
+    <script src="../static/js/manager-register.js"></script>
+    <script src="../static/js/manager-sales.js"></script>
+
+</body>
+</html>

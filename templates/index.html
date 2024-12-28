@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/index.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <title>Coffee and Cakes</title>
+</head>
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNavBar">
+        <div class="container">
+          <a class="navbar-brand text-uppercase" href="#">Coffee & Cakes</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#coffee-sec">Coffee</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tea-sec">Tea</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cake-sec">Cakes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cookie-sec">Cookies and Breads</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <img src="../static/images/icons/cart-fill_whitefull.svg" alt="Logo" width="30" height="24">
+                        <span class="d-md-none">Cart</span>
+                    </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Cart -->
+    <aside class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="cart-all-items">
+            <ul class="list-group list-group-numbered cart-ul">
+
+            </ul>
+          </div>
+          <div class="cart-footer">
+            <div class="cart-menu-total">
+              <h5 style="font-weight: 300; padding-right: 5px;">Total:</h5>
+            <h5 class="me-4 cart-menu-total-value">$</h5>
+            </div>
+            <button type="button" class="btn place-order-btn">Place Order</button>
+          </div>
+        </div>
+    </aside>
+    <!-- Modal Menus -->
+    <div class="modal fade" id="success-modal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Success</h5>
+            <img src="../static/images/icons/successicongreen.png" alt="">
+          </div>
+          <div class="modal-body">
+            <p class="fs-5">Items successfully added to cart!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Coffee Modal-->
+    <div class="modal fade modal-menu-xxx" tabindex="-1" id="coffee-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Coffee Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modalbody-xxx">
+            <ul class="list-group">
+              <li class="item-container list-group-item" data-item-name="Espresso">
+                <div class="modal-menu-left">
+                  <img src="../static/images/coffee/coffee_expresso.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Espresso</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Black Coffee">
+                <div class="modal-menu-left">
+                  <img src="../static/images/coffee/coffee_black.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Black</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Latte Coffee">
+                <div class="modal-menu-left">
+                  <img src="../static/images/coffee/coffee_latte.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Latte</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Cappuccino">
+                <div class="modal-menu-left">
+                  <img src="../static/images/coffee/coffee_cappuccino.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Cappuccino</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-body border-top">
+            <p class="fw-bold">Extras:</p>
+            <form action="#" method="post">
+              <div class="extra-menu" data-item-name="Milk">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="milk">
+                    <label class="form-check-label" for="milk">Milk</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Sugar">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="sugar">
+                    <label class="form-check-label" for="sugar">Sugar</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Cynamon">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="cynammon">
+                    <label class="form-check-label" for="cynammon">Cynamon</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Honey">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="honey">
+                    <label class="form-check-label" for="honey">Honey</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Cream">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="cream">
+                    <label class="form-check-label" for="cream">Cream</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Sweetener">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="sweetener">
+                    <label class="form-check-label" for="sweetener">Sweetener</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <h5 class="me-4 modal-menu-total">+ $</h5>
+            <button type="button" class="btn addtocart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tea Modal-->
+    <div class="modal fade modal-menu-xxx" tabindex="-1" id="tea-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tea Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modalbody-xxx">
+            <ul class="list-group">
+              <li class="item-container list-group-item" data-item-name="Black Tea">
+                <div class="modal-menu-left">
+                  <img src="../static/images/tea/tea_black.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Black Tea</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Ginger Tea">
+                <div class="modal-menu-left">
+                  <img src="../static/images/tea/tea_ginger.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Ginger</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Lemon Tea">
+                <div class="modal-menu-left">
+                  <img src="../static/images/tea/tea_lemon.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Lemon</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Mint Tea">
+                <div class="modal-menu-left">
+                  <img src="../static/images/tea/tea_mint.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Mint</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      <button class="cup-size-btn" id="small-cup">S</button>
+                      <button class="cup-size-btn" id="medium-cup">M</button>
+                      <button class="cup-size-btn" id="large-cup">L</button>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-body border-top">
+            <p class="fw-bold">Extras:</p>
+            <form action="#" method="post">
+              <div class="extra-menu" data-item-name="Milk">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="milk">
+                    <label class="form-check-label" for="milk">Milk</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Sugar">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="sugar">
+                    <label class="form-check-label" for="sugar">Sugar</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Cynamon">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="cynammon">
+                    <label class="form-check-label" for="cynammon">Cynamon</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Honey">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="honey">
+                    <label class="form-check-label" for="honey">Honey</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Cream">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="cream">
+                    <label class="form-check-label" for="cream">Cream</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Sweetener">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="sweetener">
+                    <label class="form-check-label" for="sweetener">Sweetener</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <h5 class="me-4 modal-menu-total">+ $</h5>
+            <button type="button" class="btn addtocart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cake Modal-->
+    <div class="modal fade modal-menu-xxx" tabindex="-1" id="cake-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cake Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modalbody-xxx">
+            <ul class="list-group">
+              <li class="item-container list-group-item" data-item-name="Black Forest">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cakes/cake_blackforest.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Black Forest</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Dutch Cake">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cakes/cake_holandesa.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Dutch Cake</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Lemon Cake">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cakes/cake_lemon.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Lemon</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Petit Cake">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cakes/cake_petitgateau.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Petit Gateau</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Strawberry Cake">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cakes/cake_strawberry.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Strawberry</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-body border-top">
+            <p class="fw-bold">Extras:</p>
+            <form action="#" method="post">
+              <div class="extra-menu" data-item-name="Chocolate Sauce">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="chocsauce">
+                    <label class="form-check-label" for="chocsauce">Chocolate Sauce</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Whipped Cream">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="whipcream">
+                    <label class="form-check-label" for="whipcream">Whipped Cream</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <h5 class="me-4 modal-menu-total">+ $</h5>
+            <button type="button" class="btn addtocart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cookies Modal-->
+    <div class="modal fade modal-menu-xxx" tabindex="-1" id="cookies-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cookies & Breads Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modalbody-xxx">
+            <ul class="list-group">
+              <li class="item-container list-group-item" data-item-name="Traditional Cookies">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cookies and breads/cookie_trad.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Cookies</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+                      
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Chocolate Cookies">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cookies and breads/cookie_choc.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Chocolate Cookies</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Cramberry Pie">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cookies and breads/paestry_cranberry.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Cramberry Pie</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Toast & Egg">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cookies and breads/bread_toastegg.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Toast & Egg</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item-container list-group-item" data-item-name="Whole Grain">
+                <div class="modal-menu-left">
+                  <img src="../static/images/cookies and breads/bread_wholegrain.jpg" alt="">
+                  <div class="me-4">
+                    <strong>Whole Grain Bread</strong>
+                  </div>
+                </div>
+                <div class="modal-menu-right">
+                  <div class="size-and-quantity">
+                    <div class="cup-size">
+
+                    </div>
+                    <div class="item-quantity">
+                      <button class="fs-4 flex-xxx minus-btn">-</button>
+                      <input class="amount-field" type="text" value="0">
+                      <button class="fs-5 flex-xxx plus-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="item-price">
+                    <p class="item-price-field">$</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-body border-top">
+            <p class="fw-bold">Extras:</p>
+            <form action="#" method="post">
+              <div class="extra-menu" data-item-name="Wildberries Jam">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="wildjam">
+                    <label class="form-check-label" for="wildjam">WildBerry Jam</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Butter">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="butter">
+                    <label class="form-check-label" for="butter">Butter</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="extra-menu" data-item-name="Olive Oil">
+                <div class="modal-menu-left">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="extras" id="oliveoil">
+                    <label class="form-check-label" for="oliveoil">Olive Oil</label>
+                  </div>
+                </div>
+                  <div class="modal-menu-right">
+                    <div class="item-price">
+                      <p class="item-price-field">$</p>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <h5 class="me-4 modal-menu-total">+ $</h5>
+            <button type="button" class="btn addtocart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Categories -->
+    <section class="coffee-section section-scroll-fix" id="coffee-sec">
+      <div class="carousel-container coffee-container">
+          <div class="container">
+              <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="carousel-caption">
+                          <h1 class="text-capitalize display-1 fw-bold">our coffee tastes good!</h1>
+                          <p class="fs-3">Pick the one that suits your mood</p>
+                          <button class="btn px-4 py-2 fs-5 mt-3 mb-5" data-bs-toggle="modal" data-bs-target="#coffee-modal">Your Coffee >>></button>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="container-xxx">
+                          <div class="row">
+                              <div class="col-6 col-md-3 flex-xxx">
+                                  <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#coffee-modal"
+                                  data-card-name="Espresso">
+                                      <img src="../static/images/coffee/coffee_expresso.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <p class="card-text card-text-xxx">Espresso</p>
+                                      </div>
+                                    </div>
+                              </div>
+                              <div class="col-6 col-md-3 flex-xxx">
+                                  <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#coffee-modal"
+                                  data-card-name="Black Coffee">
+                                      <img src="../static/images/coffee/coffee_black.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <p class="card-text card-text-xxx">Black</p>
+                                      </div>
+                                    </div>
+                              </div>
+                              <div class="col-6 col-md-3 flex-xxx">
+                                  <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#coffee-modal"
+                                  data-card-name="Latte Coffee">
+                                      <img src="../static/images/coffee/coffee_latte.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <p class="card-text card-text-xxx">Cafe Latte</p>
+                                      </div>
+                                    </div>
+                              </div>
+                              <div class="col-6 col-md-3 flex-xxx">
+                                  <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#coffee-modal"
+                                  data-card-name="Cappuccino">
+                                      <img src="../static/images/coffee/coffee_cappuccino.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <p class="card-text card-text-xxx">Cappuccino</p>
+                                      </div>
+                                    </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </section>
+    <section class="tea-section section-scroll-fix" id="tea-sec">
+      <div class="container cat-header-xxx" data-bs-toggle="modal" data-bs-target="#tea-modal">
+        <h1 class="section-titles-xxx display-6">: : Tea World</h1>
+      </div>
+      <div class="tea-container">
+        <div class="carousel-container">
+            <div class="container">
+                <div id="carouselExample2" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h1 class="text-capitalize display-1 fw-bold">from the mountains of sri lanka</h1>
+                            <p class="fs-3">Our tea grows on the sunnies places</p>
+                            <button class="btn px-4 fs-5 mt-3" data-bs-toggle="modal" data-bs-target="#tea-modal">Your Tea >>></button>
+                        </div>
+                      </div>
+                      <div class="carousel-item active">
+                        <div class="container-xxx">
+                            <div class="row">
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" 
+                                    data-bs-toggle="modal" data-bs-target="#tea-modal"
+                                  data-card-name="Black Tea">
+                                        <img src="../static/images/tea/tea_black.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Black Tea</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#tea-modal"
+                                    data-card-name="Ginger Tea">
+                                        <img src="../static/images/tea/tea_ginger.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Ginger</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#tea-modal"
+                                    data-card-name="Lemon Tea">
+                                        <img src="../static/images/tea/tea_lemon.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Lemon</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#tea-modal"
+                                    data-card-name="Mint Tea">
+                                        <img src="../static/images/tea/tea_mint.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Mint</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="cake-section section-scroll-fix" id="cake-sec">
+      <div class="container cat-header-xxx"  data-bs-toggle="modal" data-bs-target="#cake-modal">
+        <h1 class="section-titles-xxx display-6">: : Cake World</h1>
+      </div>
+      <div class="cake-container">
+        <div class="carousel-container">
+            <div class="container">
+                <div id="carouselExample3" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="container-xxx">
+                            <div class="row">
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cake-modal"
+                                    data-card-name="Black Forest">
+                                        <img src="../static/images/cakes/cake_blackforest.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Black Forest</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cake-modal"
+                                    data-card-name="Dutch Cake">
+                                        <img src="../static/images/cakes/cake_holandesa.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Dutch Cake</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cake-modal"
+                                    data-card-name="Lemon Cake">
+                                        <img src="../static/images/cakes/cake_lemon.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Lemon</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cake-modal"
+                                    data-card-name="Petit Cake">
+                                        <img src="../static/images/cakes/cake_petitgateau.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Petit</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="container-xxx">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cake-modal"
+                                    data-card-name="Strawberry Cake">
+                                        <img src="../static/images/cakes/cake_strawberry.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Strawberry</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="cookie-section section-scroll-fix" id="cookie-sec">
+      <div class="container cat-header-xxx"  data-bs-toggle="modal" data-bs-target="#cookies-modal">
+        <h1 class="section-titles-xxx display-6">: : Cookies & Bread World</h1>
+      </div>
+      <div class="cookie-container">
+        <div class="carousel-container">
+            <div class="container">
+                <div id="carouselExample4" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="container-xxx">
+                            <div class="row">
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cookies-modal"
+                                    data-card-name="Traditional Cookies">
+                                        <img src="../static/images/cookies and breads/cookie_trad.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Traditional</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cookies-modal"
+                                    data-card-name="Chocolate Cookies">
+                                        <img src="../static/images/cookies and breads/cookie_choc.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Full Chocolate</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cookies-modal"
+                                    data-card-name="Cramberry Pie">
+                                        <img src="../static/images/cookies and breads/paestry_cranberry.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Cramberry Pie</p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cookies-modal"
+                                    data-card-name="Toast & Egg">
+                                        <img src="../static/images/cookies and breads/bread_toastegg.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Toast & Egg</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="container-xxx">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 flex-xxx">
+                                    <div class="card card-xxx4" data-bs-toggle="modal" data-bs-target="#cookies-modal"
+                                    data-card-name="Whole Grain">
+                                        <img src="../static/images/cookies and breads/bread_wholegrain.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text card-text-xxx">Whole Grain</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-xxx flex-xxx">
+      <p class="text-capitalize p-xxx">all rights reserved</p>
+      <p class="text-uppercase p-xxx mx-3 fs-4">Coffee & Cakes</p>
+    </div>
+  </footer>
+    <!-- JS -->
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/js/cart.js"></script>
+    <script src="../static/js/fetchprice.js"></script>
+    <script src="../static/js/navbar.js"></script>
+    <script src="../static/js/summary.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+.cards-container {
+    margin-top: 80px;
+}
+
+.card-title-xxx {
+    height: 50px;
+}
+
+.card-text-xxx {
+    height: 80px;
+    overflow: hidden;
+}
+
+.modal-card-body {
+    display: flex;
+    align-items: center;
+}
+
+.modal-card-name {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.modal-card-checkbox {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(230, 230, 230);
+}
+
+.green-back {
+    background-color: rgb(135, 253, 67);
+}
+
+
+/* HISTORY */
+
+.history-item {
+    cursor: pointer;
+}
+
+.history-item:hover {
+    font-weight: bold;
+}

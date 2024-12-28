@@ -1,0 +1,383 @@
+body {
+    background-color: #292420;
+}
+
+.section-scroll-fix {
+    padding-top: 57px;
+    margin-top: -57px;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: #25201c;
+}
+
+
+/* Coffee Section */
+
+.coffee-container {
+    position: relative;
+    height: 100vh;
+    min-height: 480px;
+    margin-top: 57px;
+}
+
+.coffee-container::before {
+    content: '';
+    position: absolute;
+    filter: brightness(0.6);
+    background-image: url('../images/main_page/coffee_cat.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    height: 480px;
+}
+
+.btn {
+    background-color: #c6af86;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #2e1d13;
+}
+
+.container-xxx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 90%;
+    margin-left: 10%;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.flex-xxx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-xxx4 {
+    min-width: 120px;
+}
+
+.card-text-xxx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.card {
+    transition: transform 0.1s ease;
+    z-index: 100;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+/* Tea Section */
+
+.cat-header-xxx {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section-titles-xxx {
+    color: white;
+    padding: 5px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.cat-header-xxx:hover > .section-titles-xxx{
+    color: #c6af86;
+}
+
+.tea-container {
+    position: relative;
+    height: 480px;
+}
+
+.tea-container::before {
+    content: '';
+    position: absolute;
+    filter: brightness(0.6);
+    background-image: url('../images/main_page/tea_cat.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cake Section */
+
+.cake-container {
+    position: relative;
+    height: 480px;
+}
+
+.cake-container::before {
+    content: '';
+    position: absolute;
+    filter: brightness(0.6);
+    background-image: url('../images/main_page/cake_cat.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Cookies Section */
+
+.cookie-container {
+    position: relative;
+    height: 82vh;
+    min-height: 480px;
+}
+
+.cookie-container::before {
+    content: '';
+    position: absolute;
+    filter: brightness(0.6);
+    background-image: url('../images/main_page/cookie_cat.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Footer */
+
+.footer-xxx {
+    color: gray;
+    margin-top: 10px;
+}
+
+.p-xxx {
+    padding-top: 10px;
+}
+
+
+
+/* Modal List Items */
+
+.modalbody-xxx {
+    padding: 0;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+}
+
+.modal-menu-left {
+    display: flex;
+    align-items: center;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.modal-menu-right {
+    display: flex;
+    align-items: center;
+}
+
+.extra-menu {
+    display: flex;
+}
+  
+.item-container img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.size-and-quantity {
+    display: flex;
+}
+
+.cup-size {
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
+    width: 100px;
+}
+
+.cup-size-btn {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.cup-size-btn.selected {
+    color: white;
+    background-color: #25201c;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+    width: 100px;
+}
+
+.item-quantity button {
+    width: 25px;
+    height: 25px;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+.item-quantity input {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.item-price p {
+    margin: 0;
+    margin-left: 20px;
+    padding-right: 10px;
+}
+
+
+/* Cart Items */
+
+.cart-item-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-container img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.cart-item-left {
+    display: flex;
+    align-items: center;
+    width: 180px;
+}
+
+.cart-item-mid {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex: 1;
+}
+
+.cart-item-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    color: gray;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.cart-item-price {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.cart-item-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+}
+
+.cart-menu-total {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+
+.place-order-btn {
+    margin-top: 8px;
+    width: 100%;
+}
+
+/* @media */
+
+@media (max-width: 767px) {
+
+    .section-scroll-fix {
+        padding-top: 55px;
+        margin-top: -55px;
+    }
+
+    .coffee-container {
+        height: 480px;
+    }
+
+    .cookie-container {
+        height: 480px;
+    }
+
+    .card-xxx4 {
+        width: 150px;
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 510px) {
+
+    .modal-menu-left {
+        min-width: 170px;
+        width: 170px;
+    }
+
+    .item-container img {
+        margin-right: 10px;
+    }
+
+    .cup-size {
+        margin-right: 10px;
+    }
+
+    .size-and-quantity {
+        flex-direction: column;
+    }
+
+    .item-price p {
+        margin-left: 0;
+    }
+
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../static/css/bootstrap.css" rel="stylesheet">
+  <link href="../static/css/waiting.css" rel="stylesheet">
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="../static/js/waiting.js"></script>
+
+
+  <title>Processing Payment</title>
+</head>
+<body class="body-ready">
+  <div class="container order-ready-div order-ready-hide">Your Order Is Ready!</div>
+  <div id="payment-status">
+    <div id="status-icon"></div>
+    <span class="text-uppercase fs-3">Coffee & Cakes</span>
+    <h2 id="status-text"></h2>
+    <div id="details-table">
+      <table>
+        <tbody>
+          <tr>
+            <td class="TableLabel">ID: </td>
+            <td id="intent-id" class="TableContent"></td>
+          </tr>
+          <tr>
+            <td class="TableLabel">Status: </td>
+            <td id="intent-status" class="TableContent"></td>
+          </tr>
+          <tr>
+            <td class="TableLabel">Your Token: </td>
+            <td id="order-token" class="TableContent"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script src="../static/js/bootstrap.bundle.js"></script>
+</body>
+</html>

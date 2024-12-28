@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../static/css/bootstrap.css" rel="stylesheet">
+  <link href="../static/css/payorder.css" rel="stylesheet">
+  <link href="../static/css/creditcheckout.css" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="../static/js/creditcheckout.js" defer></script>
+
+  <script src="../static/js/payorder.js" defer></script>
+
+  <title>Pay Order</title>
+</head>
+<body>
+  <header>
+    <div class="container-fluid top-header">
+      <div class="container top-header-container">
+        <span class="text-uppercase fs-3">Coffee & Cakes</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="pay-section-container">
+      <div class="container">
+          <div class="row payorder-container">
+            <div class="col-md-6 container-left">
+              <div class="accordion d-block d-md-none" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      Summary
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <ul class="summary-ul">
+                        
+                      </ul>
+                      <div class="summary-total-container">
+                        <h5 class="summary-total">Total</h5>
+                        <p class="summary-total-value"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container order-summary-container d-none d-md-block">
+                <h2 class="text-center summary-title">Summary</h2>
+                <p class="line"></p>
+                <ul class="summary-ul">
+                  
+                </ul>   
+                <div class="summary-total-container">
+                  <h5 class="summary-total">Total</h5>
+                  <p class="summary-total-value"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 container-right">
+              <div class="payment-methods">
+                <ul class="nav nav-tabs credit-navtabs" id="myTab" role="tablist">
+                  <li class="nav-item credit-tab" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                      <img src="../static/images/icons/mastervisa.png" style="width: 120px;">
+                    </button>
+                  </li>
+                  <li class="nav-item credit-tab" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                      <img src="../static/images/icons/paypal-3.svg" style="width: 120px;">
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="dummy-card">
+                      <p>Dummy Card: 5555 5555 5555 4444</p>
+                      <p>Expiry Date: 12/32</p>
+                      <p>CVC: 123</p>
+                    </div>
+                    <!-- Display a payment form -->
+                    <form id="payment-form">
+                      <div id="payment-element">
+                        <!--Stripe.js injects the Payment Element-->
+                      </div>
+                      <button id="submit">
+                        <div class="spinner-xxx hidden-xxx" id="spinner-xxx"></div>
+                        <span class="payment-btn-text">Pay Now :: </span>
+                        <span class="payment-total-value" id="button-text">
+                        </span>
+                      </button>
+                      <div id="payment-message" class="hidden-xxx"></div>
+                    </form>
+                    <!-- [DEV]: For demo purposes only, display dynamic payment methods annotation and integration checker -->
+                    <div class="" id="dpm-annotation">
+                      <p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" id="dpm-integration-checker"></a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">This Service Is Not Working At The Moment.
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>  
+  </main>  
+  <script src="../static/js/bootstrap.bundle.js"></script>
+  
+</body>
+</html>

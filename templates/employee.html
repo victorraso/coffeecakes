@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/employee.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <title>C&C Employee Page</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+            <div class="container">
+                <a class="navbar-brand text-uppercase" href="#">C&C Employee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link ml-5" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">History
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link">: : Hello, {{ session['employee_username'] }} : :</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logoutlink" href="{{ url_for('employee_logout') }}">Log Out</a>
+                    </li>                          
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- HISTORY -->
+        <aside class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Order's History</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-group">
+                    
+                </ul>
+            </div>
+        </aside>
+
+        <!-- CARDS -->
+         <div class="container cards-container">
+            <div class="row">
+                
+            </div>
+         </div>
+
+         <!-- MODAL -->
+        <div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="fullScreenModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fullScreenModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                        
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary order-ready-btn">Order Ready</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="historyModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+
+                  </ul>
+                  <h5></h5>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/js/employee.js"></script>
+
+</body>
+</html>
