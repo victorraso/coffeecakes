@@ -8,9 +8,6 @@ venv/
 # Ignore environment variable files
 .env
 
-# Ignore SQLite database files (if using SQLite)
-*.db
-
 # Ignore logs and other temp files
 *.log
 
