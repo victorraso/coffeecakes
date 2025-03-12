@@ -206,6 +206,7 @@ body {
 .modal-menu-right {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .extra-menu {
@@ -230,8 +231,13 @@ body {
 }
 
 .cup-size-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
     width: 30px;
     height: 30px;
+    padding: 0;
     background-color: white;
     border: 1px solid gray;
 }
@@ -246,19 +252,22 @@ body {
     align-items: center;
     margin-top: 5px;
     gap: 5px;
-    width: 100px;
+    max-width: 100px;
 }
 
 .item-quantity button {
-    width: 25px;
-    height: 25px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
     background-color: lightgray;
     border: 1px solid gray;
 }
 
 .item-quantity input {
-    width: 40px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     border: 1px solid #ccc;
 }
